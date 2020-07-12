@@ -1,0 +1,29 @@
+https://code.visualstudio.com   Visual Studio code 编辑工具  安装一直打开下一步 输入指令查找中文插件
+https://www.typora.io  后后缀为.md 的笔记工具 
+https://www.xmind.cn/xmind8-pro/   看后缀.xmind思维导图工具
+https://www.utorrent.com   磁链接下载工具 uTorrent
+http://free.3v.do/  免费的远程服务器 （免费空间）
+https://jquery.com/
+https://code.jquery.com/各个版本下载
+http://www.jq22.com/   jq插件
+http://www.htmleaf.com/
+https://github.com/alvarotrigo/fullPage.js 全屏滚动
+http://www.dowebok.com/demo/2014/77/ 全屏滚动
+fiddler使用教程：http://www.pc6.com/edu/63602.html
+http://cdn.asilu.com/#geo 在线jsonp接口测试
+https://developer.mozilla.org/zh-CN///类似w3c school  MDN
+http://amazeui.shopxo.net/ 响应式开发框架
+https://www.bootcss.com/ bootstrap 框架网站
+https://www.npmjs.com/ 第三方模块管理 Node 软件包管理器 
+http://www.jq22.com/jquery-info4121 jquery Nprogress插件 加载进度条插件
+https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=zh-CN //[Vue.js devtools - 翻墙安装方式 - 推荐]
+https://blog.csdn.net/weixin_42218847/article/details/81488075    //  url中的hash
+https://www.mongodb.com/download-center/community // mongodb 是nodejs 相关使用的数据库
+https://www.mongodb.com/download-center/compass   界面化数据库
+https://cli.vuejs.org/zh/guide/    vue脚手架
+http://element-cn.eleme.io/#/zh-CN ------------Element-UI 
+https://gitee.com/ 码云 代码托管平台
+git clone https://github.com/vuejs/vue-devtools  // vue.js调试工具
+https://leetcode-cn.com/ 题库
+https://freessl.org   免费申请ssL证书网站
+https://stackoverflow.com/ 错误问题找答案

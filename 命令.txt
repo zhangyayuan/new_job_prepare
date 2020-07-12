@@ -1,0 +1,260 @@
+window +r
+cmd 
+notepad 打开记事本
+mspaint 打开画图
+calc 打开计算机
+write 写字板
+sysdm.cpl 打开环境变量设置窗口
+-----------------------------------
+cmd 
+d: 进入到d盘
+cd ps目录
+ipconfig  查看ip地址
+dir 查看目录下文件 windows
+ls 查看文件 Linux系统查看
+md 文件夹 创建文件夹
+rmdir 文件夹 删除子文件夹
+rd 文件夹 删除子文件夹
+del 删除文件
+rd /s/q 文件夹 删除子文件夹包括里面有子目录 /s子目录 /q安静的
+cd ../ 进入上一个目录
+echo on > a.txt 创建一一个文件
+echo 123 > a.txt 文件里写内容
+echo 123 >> a.txt 文件里追加内容
+cat a.txt Linux系统查看
+type a.txt windows 系统下查看文件内容
+------------cmd------------------------
+cmd 安装
+npm install -g less 安装less 
+离线安装
+C:\Users\张亚元\AppData\Roaming\npm
+node -v  判断nodejs是否安装成功
+npm -v 判断 npm 是否成功
+lessc -v 判断less 是否安装成功
+lessc test.less test.css 把less编译成css文件
+node test.js  执行一个js文件
+clear 清除以前的命令输出
+npm install fromidable   //本地安装 npm命令  install 安装 fromidable 只是一个第三方模块名可以是不同的，如less
+npm install -g less // -g 全局     安装less 
+npm uninstall fromidable   //卸载第三方模块
+***** 命令工具 ：全局安装 ；库文件：本地安装*******
+
+
+--------------------git-------------------------
+git --version 版本号
+clear 清屏
+git config --global user.name zhang  提交或者修改人姓名
+git config --global user.email 861873819@qq.com 提交或者修改人邮箱
+git config --list 查看git配置信息
+提交步骤
+git init 初始化git仓库
+git status 插看文件状态
+git add 文件列表  追踪文件可以提交多个文件 空格隔开
+git add . 把所有文件添加到缓存区
+git commit -m 提交信息    向仓库提交代码
+//git commit -m 提交信息    --author=''zhang <861873819@qq.com>" 这里有点问题
+git log 查看提交记录
+gitk 查看日志修改内容
+****暂存区***
+1、可以作为一个临时版本库
+2、可以将修改多个文件分多次进行提交
+恢复记录 撤销
+git checkout list.html  暂存区文件覆盖工作目录的文件 恢复文件
+git rm --cached test.html 将文件从暂存区删除
+git reset  --hard commitID 将git仓库中指定的更新记录恢复出来，并覆盖暂缓存区和工作目录
+分支 命令
+git branch 查看分支
+git branch 分支名字  创建分支
+git checkout -b dev  \\从已有的分支创建新的分支(如从master分支),创建一个dev分支
+git checkout 分支名称 切换分支
+git merge 来源分支 合并分支
+git merge 来源分支 --no-ff 把合并的日志添加到gitlog
+git branch -d 分支名称 删除分支（分支被合并后才允许删除）（-D 强制删除）
+暂时保存更改
+git stash 储存临时改动
+git stash pop 恢复改动
+远程交互
+git remote add origin https://github.com/zhangyayuan/-.git  给远程仓库起个简写名
+git push origin master 提交到远程仓库
+git push -u origin master 提交到远程仓库 下次 git push 就可以了
+git push -u origin login 项目这里可以把子分支login也推送到远程仓库
+git clone https://github.com/zhangyayuan/jd.git  远程仓库下载代码包
+git push 将本地仓库文件提交到远程仓库
+git pull 拉取代码
+git config  credential.helper store git提交时不用输入用户名密码的方法
+git reset --hard 重置索引和工作目录
+pwd    // 打印目录/c/Users/张亚元/Desktop
+mkdir jd 创建jd文件夹
+mkdir jd && cd jd  创建jd文件夹并到这个文件夹内
+ls -a  ls查看文件   -a 隐藏文件
+rmdir 文件名 只能删除空目录空文件夹
+rm 文件名 删除文件
+rm -rf 文件名  删除文件夹
+------------svn--------------
+svnadmin create C:\Users\张亚元\Desktop\SvnWeb\Shop
+svnserve -d -r C:\Users\张亚元\Desktop\SvnWeb\Shop 通过指令svn 地址指向shop版本仓库
+
+--------------------npm-----------------------------
+npm install formidable  使用npm 命令下载第三方模块formidable  // formidable 主要做文件上传
+npm uninstall formidable 删除第三方模块
+npm install formidable mine // 下载多个第三方模块方法
+npm install nodemon -g //-g全局安装 nodemon是一个命令行工具 用以辅助项目开发 文件发生保存操作的时候就会重新执行该文件
+nodemon 文件地址   //自动更新文件输出结果
+ctrl + c 是否终止操作
+npm install nrm -g 下载nrm国内
+nrm ls  查看下载地址
+nrm use taobao // 使用淘宝地址
+npm install mime 根据请求路径分析出文件类型的第三方模块
+npm install gulp-cli -g  // gulp命令行工具
+npm init -y  生成package.json 记录当前项目信息 如 名称版本作者 下载的项目依赖和开发依赖第三方模块
+npm install gulp 引入gulp模块 --save-dev 加上就可以在package.json里区分是开发依赖 不是项目依赖了
+npm install 下载所有package.json 记录的第三方模块
+npm install --production 只会去下载package.json 中项目依赖
+npm run 别名（build） // 命令过长时可以使用 在package.json文件中的scripts 中添加“build”:"nodemon ./app.js"
+----------gulp----------------
+npm install gulp-cli -g  // gulp命令行工具
+gulp 任务名称   // 执行任务
+gulp.scr() ; 获取处理文件 gulp.dest(); 输出处理文件 gulp.task()建立gulp任务；gulp.watch()监控文件的变换；
+gulp插件---gulp-htmlmin html文件的压缩；
+gulp-csso 压缩css；
+gulp-babel：JavaScript语法转换 
+gulp-less：less语法转换
+gulp-uglify 压缩JavaScript ； 
+gulp-file-include 公共文件包含；
+browsersync 浏览器同步
+npm install gulp-htmlmin // 示范 安装插件 上
+npm install mongoose  使用nodejs 操作MongoDB数据库需要依赖nodejs 第三方包
+net stop mongodb  关闭mongodb 数据库
+net start mongodb 启动 数据库
+mongoimport -d 数据库名称 -c 集合名称 --file 要导入的数据文件// mongodb数据库导入数据
+ mongoimport -d playground -c users --file .\user.json 
+npm install art-template 模板引擎
+npm install datefarmat 处理时间模块
+npm install router 路由第三方模块
+npm install serve-static 实现静态资源访问服务
+npm install express  // express   基于node平台web 应用开发框架
+npm install body-parser 基于express框架 的获取post请求参数 第三方模块
+npm install express-art-template art-template  // 基于express框架开发的 模板引擎
+--- bcrypt 依赖环境
+python 2.x
+npm install -g node-gyp
+npm install --global --production windows-build-tools
+======moogoDB 数据库添加账号==========
+mongo 链接数据库
+show dbs 查看数据库 
+use admin  切换到admin 数据库 超级管理员
+db.createUser() 创建超级管理员
+use blog  切换到 blog 数据库
+db.createUser() 创建普通账户
+exit 退出数据库
+卸载 mongodb 服务
+1.net stop mongodb
+2.mongod --remove
+创建mongodb 服务
+mongodb --logpath=''c:\Program Files\Mongodb\server\4.1\log\mongodb.log" --dbpath="c:\Program Files\Mongodb\server\4.1\data" --install -auth
+net start mongodb
+npm install config
+根目录创建config文件夹
+config 文件夹新建default.json development.json production.json
+npm install morgan 客户端发送的信息打印在控制台中
+// 将敏感配置信息存储在环境变量中
+在config 文件夹中建立 custom-environment-variables.json文件中
+----node.js中通过babel 体验ES6模块化----
+npm install --save-dev @babel/core @babel/cli @babel/reset-env @babel/node
+npm install --save @babel/polyfill
+项目跟目录创建babel.config.js
+babel.config.js 文件内容如右侧代码
+通过 npx babel-node index.js 执行代码
+-------------webpack使用 -----
+npm install webpack webpack-cli -D   安装webpack相关包
+在根目录下创建名为webpack.config.js 的webpack配置文件
+配置文件中 初始化基本配置
+module.exports = {model:'development' }用来指定构建模式
+package.json  配置 scripts {‘dev’：‘webpack’} 通过npm run dev命令 启动webpack打包 相当于npx webpack 命令
+npm install webpack-dev-server -D 安装项目自动打包工具
+package.json -> scripts 中 dev  改成scripts {“dev”：‘webpack-dev-server’}// {“dev”：‘webpack-dev-server --open --host 127.0.0.1 --port 8888’} 这直接就浏览器打开和修改配置端口地址。。。。
+将src->index.html 中script 脚本引用路径修改为根路径 下——>"/bundle.js"
+
+npm install html-webpack-plugin -D  安装生成预览页面的插件
+webpack.config.js 文件头部区域添加如下配置信息
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const htmlPlugin = new HtmlWebpackPlugin({
+template:'./src/index.html',
+filename:'index.html'})
+修改 webpack.config.js 
+module.exports ={
+plugins:[htmlPlugin]}
+
+--打包处理css less sass文件
+1 npm i style-loader css-loader -D 安装处理css文件的loader
+2 webpack.config.js 的module -> rules 数组中的 添加loader 规则如下:
+module:{ rules:[ {test:/\.css$/,use:['style-loader','css-loader']}]}
+npm i less-loader less -D   // 打包处理less文件 less -D   webpack.config.js ->module->->rules ->{test:/\.less$/,use:['style-loader','css-loader','less-loader']}
+npm i sass-loader node-sass -D // 打包处理sass文件 sass -D   webpack.config.js ->module->->rules ->{test:/\.scss$/,use:['style-loader','css-loader','sass-loader']}
+npm i postcss-loader autoprefixer -D 配置postcss 自动添加css 的兼容前缀
+创建postcss.config.js 文件
+const autoprefixer = require("autoprefixer") 
+module.exports ={plugins:[autoprefixer]}
+在webpack.config.js 中修改css规则  webpack.config.js ->module->->rules ->{test:/\.css$/,use:['style-loader','css-loader','postcss-loader']}
+
+---打包样式表中的图片和字体文件
+npm i url-loader file-loader -D //webpack.config.js ->module->->rules ->{test:/\.jpg|png|gif|bmp|ttf|eot|svg|woff|woff2$/,use:'url-loader?limit=16940'}//limit 用来指定图片大小 这个指定大小图片将会转base64
+
+---打包处理js文件中的高级语法
+npm i babel-loader @babel/core @babel/runtime -D //babel转换器相关包
+npm i @babel/preset-env @babel/plugin-transform-runtime @babel/plugin-proposal-class-properties -D //babel语法插件相关的包
+创建babel.config.js文件并配置
+module.exports = {presets:['@babel/preset-env'],plugins:['@babel/plugin-transform-runtime','@babel/plugin-proposal-class-properties']}
+在webpack.config.js的module ->rules 数组中 添加loader规则
+{test:/\.js$/,use:'babel-loader',exclude:/node_modules/}
+
+---打包处理vue 组件单文件
+npm i vue-loader vue-template-compiler -D
+在webpack.config.js配置文件中 添加vue-loader 的配置如下
+const VueLoaderPlugin = require("vue-loader/lib/plugin")
+module.exports = {module ->rules > {test:/\.vue$/,loader:'vue-loader'}  plugins:[ new VueLoaderPlugin()
+
+---在webpack 项目中使用vue
+npm i vue -s 安装vue 阉割版的vue。。。。
+import vue from 'vue' 导入就行了
+---webpack 打包发布
+package.json文件中添加scripts 下“build”:"webpack -p"
+执行 npm run build 打包就行了 
+
+---vue脚手架
+npm install -g @vue/cli  //3.X版本 vue脚手架
+vue create my-project // 基于交互式命令行的方式创建新版vue项目
+vue ui // 基于图形化界面的方式 创建新版vue项目
+npm install -g @vue/cli-init ---vue init webpack my-project // 旧模板创建旧版vue项目
+
+---vue-table-width-tree-gird 第三方插件 使用带了树表格的组件
+npm i vue-table-with-tree-grid -S
+---vue-quill-editor   第三方插件 富文本编辑器
+npm i vue-quill-editor -S
+
+---lodash 深拷贝插件
+
+---npm install --save nprogress  进度条
+
+---vue-cli-service build --report 打包并生成报告文件
+npm install jquery -save // 简写npm i jquery -s 
+------------------react----------------
+cnpm i react react-dom -S 安装包
+import React from 'react'
+import ReactDOM from 'react-dom'
+cnpm i babel-preset-react -D  //JSX 语法
+--------------react-native  -------------------
+react-native init objname //创建项目
+adb device 检查当前有没有设备连接到电脑
+react-native run-android  打包
+react-native start 命令启动 react-native Packager 实时编译项目 源代码
+--------------weex 打包-----------------需要nodejs weex cli
+npm install -g weex-toolkit       //weex-toolkit  提供脚手架
+weex create project-name  初始化weex项目
+weex platform  add android  //添加andriod 平台
+weex run android  //打包运行
+
+   
+
+
+
